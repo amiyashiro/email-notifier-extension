@@ -1,9 +1,13 @@
 //OAuth2
+
 chrome.identity.getAuthToken(
     {'interactive': true},
-    function(){
-        window.gapi_onload = authorize();
-        loadScript('https://apis.google.com/js/client.js');
+    function(token) {
+        if (chrome.runtime.lastError) {
+            console.log("Error");
+        } else {
+            console.log("Token: " + token);
+        }
     }
 );
 
@@ -85,6 +89,6 @@ function mailAlarm(alarm) {
     getFirstMessage();
 }
 
-chrome.alarms.create('checkMail', {periodInMinutes:0.5});
+//chrome.alarms.create('checkMail', {periodInMinutes:0.5});
 
-chrome.alarms.onAlarm.addListener(mailAlarm);
+//chrome.alarms.onAlarm.addListener(mailAlarm);
