@@ -1,27 +1,26 @@
 {
-"manifest_version": 2,
-"version": "1.0",
-"name": "Gmail Notifier",
-"description": "Displays popup notification when an email is received",
-"permissions": [
-    "notifications",
-    "alarms",
-    "identity",
-    "*://*.google.com/*",
-    "https://www.googleapis.com/*"
-],
-"browser_action": {
-    "default_icon": "gmail_icon.png"
-},
-"background":{
-    "scripts": ["background.js"],
-    "persistent": false
-},
-"content_security_policy": "script-src https://*.google.com 'unsafe-eval'; object-src 'self'",
-"oauth2": {
-    "client_id": "123243066664-p4k49saqg807tjr0884b9c4g56bskpn9.apps.googleusercontent.com",
-    "scopes": [
-        "https://www.googleapis.com/auth/gmail.modify"
-    ]
-}
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "Gmail Notifier",
+    "description": "Displays popup notification when an email is received",
+    "permissions": [
+        "notifications",
+        "alarms",
+        "identity",
+        "*://*.google.com/*",
+        "https://www.googleapis.com/*"
+    ],
+    "browser_action": {
+        "default_icon": "gmail_icon.png"
+    },
+    "background":{
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "oauth2": {
+        "client_id": "123243066664-00f1k0k9skqlqcphjo5gmrlcslmqd1mp.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/gmail.modify"
+        ]
+    }
 }
